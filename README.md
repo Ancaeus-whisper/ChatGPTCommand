@@ -12,7 +12,7 @@ ChatGPT Command是一个基于ChatGPT-3.5-API实现的命令行工具。
 
 ## 使用
 
-### 1. 登录 ChatGPT API
+### 1. 登录 ChatGPT
 
 在使用 ChatGPT CLI 之前，你需要先在OpenAI的官网上注册并[获取ChatGPT API 的密钥](https://platform.openai.com/account/api-keys) 。
 
@@ -20,6 +20,15 @@ ChatGPT Command是一个基于ChatGPT-3.5-API实现的命令行工具。
 
 ```json
 {"api": Your API Key}
+```
+
+### 1.5. 设置代理（无需代理的可以跳过）
+
+在Source.py中设置自己的代理服务器
+
+```python
+os.environ["HTTP_PROXY"] = "代理服务器IP:端口"
+os.environ["HTTPS_PROXY"] = "代理服务器IP:端口"
 ```
 
 ### 2. 运行程序
