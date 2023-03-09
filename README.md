@@ -19,7 +19,7 @@ ChatGPT Command是一个基于ChatGPT-3.5-API实现的命令行工具。
 此后，在env/openai_key.json中输入你的密钥
 
 ```json
-{"api": Your API Key}
+{"api": "Your API Key"}
 ```
 
 ### 1.5. 设置代理（无需代理的可以跳过）
