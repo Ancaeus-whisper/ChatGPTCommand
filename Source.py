@@ -7,9 +7,6 @@ os.environ["HTTPS_PROXY"] = "https://127.0.0.1:10809"
 
 
 def get_api_key():
-    '''
-    {"api": "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"}
-    '''
     openai_key_file = 'envs/openai_key.json'
     with open(openai_key_file, 'r', encoding='utf-8') as f:
         openai_key = json.loads(f.read())
