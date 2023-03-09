@@ -71,6 +71,9 @@ python Source.py
 【<用户名>】quit
 ```
 
+## 演示
+![image](https://github.com/Ancaeus-whisper/ChatGPTCommand/blob/master/%E6%BC%94%E7%A4%BA.gif)
+
 ## 贡献
 
 如果你发现了任何问题或者想要为 ChatGPT Command 做出贡献，请前往 Github 上的 [ChatGPTCommand](https://github.com/Ancaeus-whisper/ChatGPTCommand) 项目。
