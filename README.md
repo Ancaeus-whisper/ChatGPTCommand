@@ -14,7 +14,7 @@ ChatGPT Command是一个基于ChatGPT-3.5-API实现的命令行工具。
 
 ### 1. 登录 ChatGPT
 
-在使用 ChatGPT CLI 之前，你需要先在OpenAI的官网上注册并[获取ChatGPT API 的密钥](https://platform.openai.com/account/api-keys) 。
+在使用 ChatGPT之前，你需要先在OpenAI的官网上注册并[获取ChatGPT API 的密钥](https://platform.openai.com/account/api-keys) 。
 
 此后，在env/openai_key.json中输入你的密钥
 
