@@ -2,14 +2,11 @@ import openai
 import json
 import os
 
-# 目前需要设置代理才可以访问 api
 os.environ["HTTP_PROXY"] = "http://127.0.0.1:10809"
 os.environ["HTTPS_PROXY"] = "https://127.0.0.1:10809"
 
 
 def get_api_key():
-    # 可以自己根据自己实际情况实现
-    # 以我为例子，我是存在一个 openai_key 文件里，json 格式
     '''
     {"api": "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"}
     '''
