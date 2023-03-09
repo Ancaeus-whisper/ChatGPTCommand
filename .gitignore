@@ -1,2 +1,5 @@
-/Instance
-/envs
+# 忽略envs文件夹中的opanai_key.json文件
+envs/opanai_key.json
+
+# 忽略Instance文件夹
+Instance/
