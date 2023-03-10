@@ -44,7 +44,11 @@ class Instance:
             except Exception as e:
                 print("加载实例失败：{e}")
             self.path=path
-
+    def length(self):
+        return len(self.message)-1
+    def count(self):
+        return len(str(self.message))
+            
 class ChatGPT:
     def __init__(self,instance):
         self.instance=instance
@@ -113,6 +117,7 @@ def main():
                 instance=Instance("".join(("./Instance",f"/{instance_list[num]}")),name,"")
         elif choice=="quit":
             break
+        print(f"当前对话记录{instance.length()}条，实例长度为：{instance.count()}（最大长度为4096）")
         chat=ChatGPT(instance)
         #对话进行部分
         while(True):
