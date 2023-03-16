@@ -14,7 +14,7 @@ ChatGPT Command是一个基于ChatGPT-3.5-API实现的命令行工具。
 
 ### 1. 登录 ChatGPT
 
-在使用 ChatGPT CLI 之前，你需要先在OpenAI的官网上注册并[获取ChatGPT API 的密钥](https://platform.openai.com/account/api-keys) 。
+在使用 ChatGPT之前，你需要先在OpenAI的官网上注册并[获取ChatGPT API 的密钥](https://platform.openai.com/account/api-keys) 。
 
 此后，在env/openai_key.json中输入你的密钥
 
@@ -45,7 +45,7 @@ python Source.py
 【实例】new
 ```
 
-### 3. 进入一个实例
+### 3.5. 进入一个实例
 
 要进行聊天，首先要进入一个实例，可以通过下面的命令进入：
 
@@ -70,6 +70,9 @@ python Source.py
 ```sh
 【<用户名>】quit
 ```
+
+## 演示
+![image](https://github.com/Ancaeus-whisper/ChatGPTCommand/blob/master/%E6%BC%94%E7%A4%BA.gif)
 
 ## 贡献
 

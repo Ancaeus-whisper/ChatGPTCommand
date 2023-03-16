@@ -7,9 +7,6 @@ os.environ["HTTPS_PROXY"] = "https://127.0.0.1:10809"
 
 
 def get_api_key():
-    '''
-    {"api": "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"}
-    '''
     openai_key_file = 'envs/openai_key.json'
     with open(openai_key_file, 'r', encoding='utf-8') as f:
         openai_key = json.loads(f.read())
@@ -52,10 +49,17 @@ class Instance:
                 print("加载实例失败：{e}")
             self.path=path
     def length(self):
-        return len(self.message)
+<<<<<<< HEAD
+        return len(self.message)-1
     def count(self):
         return len(str(self.message))
 
+=======
+        return len(self.message)-1
+    def count(self):
+        return len(str(self.message))
+            
+>>>>>>> 27c429fd22f5bb86c04144fc7ff41af246a32bf5
 class ChatGPT:
     def __init__(self,instance):
         self.instance=instance
