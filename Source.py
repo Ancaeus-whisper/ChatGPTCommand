@@ -27,6 +27,10 @@ def LoadInstance():
         if(os.path.splitext(file)[-1][1:]=="json"): instances.append(file)
     return instances
 
+def DeleteInstance(path):
+    os.remove("./Instance/"+path)
+
+
 class Instance:
     def __init__(self,path,name,role):
         if role!="":
@@ -47,8 +51,10 @@ class Instance:
             except Exception as e:
                 print("加载实例失败：{e}")
             self.path=path
-    def get_context_length(self):
+    def length(self):
         return len(self.message)
+    def count(self):
+        return len(str(self.message))
 
 class ChatGPT:
     def __init__(self,instance):
@@ -109,6 +115,10 @@ def main():
             realpath="".join(("./Instance",f"/{path}.json"))
             instance=Instance(realpath,name,role)
             instance_list=LoadInstance()
+        elif choice=="delete":
+            index=input("请输入序号：")
+            DeleteInstance(f"{instance_list[int(index)]}")
+            continue
         elif choice.isdigit()==True:
             num=int(choice)
             if(num>=len(instance_list)|num<0):
@@ -119,7 +129,7 @@ def main():
                 instance=Instance("".join(("./Instance",f"/{instance_list[num]}")),name,"")
         elif choice=="quit":
             break
-        print(f"当前对话记录{instance.get_context_length()-1}条，实例长度为：{len(str(instance.message))}（最大长度为4096）")
+        print(f"当前对话记录{instance.length()}条，实例长度为：{instance.count()}（最大长度为4096）")
         chat=ChatGPT(instance)
         #对话进行部分
         while(True):
